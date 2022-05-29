@@ -4,16 +4,15 @@
 #include <GLFW/glfw3.h>
 #include <string>
 namespace GDDUI_UTIL {
-	class App {
-	public:
-	    virtual ~App() = default;
-		static constexpr int WIDTH = 800;
-		static constexpr int HEIGHT = 600;
-	
-		virtual void run() {};
-	
-	private:
-		Window window{WIDTH, HEIGHT, "APP"};
-	};
+    class App {
+    public:
+        virtual ~App() = default;
+        static constexpr int WIDTH = 800;
+        static constexpr int HEIGHT = 600;
+        virtual void Run();
+        virtual void PollEvents() {glfwPollEvents();}
+    private:
+        Window window{WIDTH, HEIGHT, "APP"};
+    };
 } // GDDUI_UTIL
 #endif
