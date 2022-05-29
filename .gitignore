@@ -1,4 +1,8 @@
 *.bak
+*.dll
+*.exe
+*.a
+*.so
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
